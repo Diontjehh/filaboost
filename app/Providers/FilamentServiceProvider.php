@@ -29,14 +29,14 @@ class FilamentServiceProvider extends ServiceProvider
                 ->maxLength(255);
         });
     }
-    
+
     private function configureSelect(): void
     {
         Select::configureUsing(function (Select $field): void {
             $field->native(false);
         });
     }
-    
+
     private function configureTextarea(): void
     {
         Textarea::configureUsing(function (Textarea $field): void {
@@ -44,7 +44,7 @@ class FilamentServiceProvider extends ServiceProvider
                 ->maxLength(1024);
         });
     }
-    
+
     private function configureDatePicker(): void
     {
         DatePicker::configureUsing(function (DatePicker $field): void {
@@ -52,7 +52,7 @@ class FilamentServiceProvider extends ServiceProvider
                 ->native(false);
         });
     }
-    
+
     private function configureDateTimePicker(): void
     {
         DateTimePicker::configureUsing(function (DateTimePicker $field): void {
@@ -61,7 +61,7 @@ class FilamentServiceProvider extends ServiceProvider
                 ->seconds(false);
         });
     }
-    
+
     private function configureTable(): void
     {
         Table::configureUsing(function (Table $table): void {
