@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Symfony\Component\Process\Process;
 
-class CodeFix extends Command
+class CodeFixCommand extends Command
 {
     protected $signature = 'code:fix 
         {--dry-run : Show what would be fixed without making changes}
@@ -15,7 +15,7 @@ class CodeFix extends Command
 
     public function handle(): int
     {
-        $tools = $this->option('tools') ?: ['pint', 'rector'];
+        $tools = $this->option('tools') ?: ['rector', 'pint'];
         $dryRun = $this->option('dry-run');
 
         $this->components->info('Running code fix tools...');

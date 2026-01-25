@@ -2,7 +2,9 @@
 
 namespace {{ namespace }};
 
-final class {{ class }}
+use Lorisleiva\Actions\Action;
+
+final class {{ class }} extends Action
 {
     public function handle(): void
     {

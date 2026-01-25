@@ -3,10 +3,11 @@
 namespace {{ namespace }};
 
 use Filament\Support\Contracts\HasLabel;
+use Illuminate\Contracts\Support\Htmlable;
 
 enum {{ class }}: string implements HasLabel
 {
-    public function getLabel(): string
+    public function getLabel(): string | Htmlable | null
     {
         return match ($this) {};
     }

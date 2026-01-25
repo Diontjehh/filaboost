@@ -23,7 +23,7 @@ class UserForm
                             ->password()
                             ->required(),
                     ])
-                    ->columnSpanFull()
+                    ->columnSpanFull(),
             ]);
     }
 }
