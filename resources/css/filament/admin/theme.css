@@ -4,5 +4,5 @@
 @source '../../../../resources/views/filament/**/*';
 
 .fi-sidebar-nav {
-    @apply bg-white border-r border-gray-200;
+    @apply bg-white border-r border-gray-200 dark:bg-gray-900 dark:border-gray-800;
 }
