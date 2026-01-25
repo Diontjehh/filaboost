@@ -27,8 +27,8 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->viteTheme('resources/css/filament/admin/theme.css')
             ->login()
+            ->profile()
             ->colors([
                 'primary' => Color::Amber,
             ])
@@ -55,6 +55,9 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->sidebarWidth('18rem')
+            ->sidebarCollapsibleOnDesktop();
     }
 }

@@ -27,6 +27,7 @@ return RectorConfig::configure()
         LaravelSetList::LARAVEL_FACTORIES,
         LaravelSetList::LARAVEL_IF_HELPERS,
         LaravelSetList::LARAVEL_LEGACY_FACTORIES_TO_CLASSES,
+        LaravelSetList::LARAVEL_120,
     ])
     ->withSkip([
         AddOverrideAttributeToOverriddenMethodsRector::class,
@@ -42,4 +43,4 @@ return RectorConfig::configure()
     ->withConfiguredRule(RemoveDumpDataDeadCodeRector::class, [
         'dd', 'dump', 'var_dump',
     ])
-    ->withPhpSets();
+    ->withPhpSets(php85: true);

@@ -2,3 +2,7 @@
 
 @source '../../../../app/Filament/**/*';
 @source '../../../../resources/views/filament/**/*';
+
+.fi-sidebar-nav {
+    @apply bg-white border-r border-gray-200;
+}
