@@ -5,13 +5,13 @@ namespace App\Console\Commands;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 
-final class MakeActionCommand extends GeneratorCommand
+final class MakeEnumCommand extends GeneratorCommand
 {
-    protected $name = 'make:filaboost-action';
+    protected $name = 'make:filaboost-enum';
 
-    protected $description = 'Create a new action class';
+    protected $description = 'Create a new enum class';
 
-    protected $type = 'Action';
+    protected $type = 'Enum';
 
     public function handle(): bool|int|null
     {
@@ -30,19 +30,18 @@ final class MakeActionCommand extends GeneratorCommand
 
         return Str::of(mb_trim($name))
             ->replaceEnd('.php', '')
-            ->replaceEnd('Action', '')
-            ->append('Action')
+            ->append('Enum')
             ->toString();
     }
 
     protected function getStub(): string
     {
-        return $this->resolveStubPath('/stubs/action.stub');
+        return $this->resolveStubPath('/stubs/enum.stub');
     }
 
     protected function getDefaultNamespace($rootNamespace): string
     {
-        return $rootNamespace.'\Actions';
+        return $rootNamespace.'\Enums';
     }
 
     protected function getPath($name): string

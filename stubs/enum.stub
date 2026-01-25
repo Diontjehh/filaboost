@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+use Filament\Support\Contracts\HasLabel;
+
+enum {{ class }}: string implements HasLabel
+{
+    public function getLabel(): string
+    {
+        return match ($this) {};
+    }
+}
