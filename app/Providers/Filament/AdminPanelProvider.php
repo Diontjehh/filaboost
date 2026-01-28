@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use Filament\Actions\Action;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -30,6 +31,16 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->passwordReset()
             ->profile()
+            ->userMenuItems([
+                Action::make('telescope')
+                    ->label('Telescope')
+                    ->url('/telescope')
+                    ->icon('heroicon-o-chart-bar'),
+                Action::make('horizon')
+                    ->label('Horizon')
+                    ->url('/horizon')
+                    ->icon('heroicon-o-chart-bar'),
+            ])
             ->colors([
                 'primary' => Color::Amber,
             ])
