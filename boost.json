@@ -2,10 +2,12 @@
     "agents": [
         "opencode"
     ],
-    "editors": [
-        "opencode"
-    ],
-    "guidelines": [
+    "guidelines": true,
+    "packages": [
         "filament/filament"
+    ],
+    "skills": [
+        "tailwindcss-development",
+        "livewire-development"
     ]
 }
